@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../../index.css';
 
 export default class Droppable extends React.Component{
 
@@ -12,10 +13,19 @@ export default class Droppable extends React.Component{
     e.preventDefault();
   }
 
-render  (){
+render(){
     return (
+
       <div id = {this.props.id} onDrop = {this.drop} onDragOver = {this.allowDrop} style = { this.props.style}>
-        {this.props.children}
+
+        <div id = {this.props.id + 'caption'} className= "dropPanelCaption">
+          {this.props.caption}
+        </div>
+
+        <div id = {this.props.id + 'body'} className= "dropPanelCaption">
+            {this.props.children}
+        </div>
+
       </div>
     );
 }
