@@ -28,11 +28,23 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#wrapper {
+  width : 100%;
+  paddding : 32px;
+  display: flex;
+  justify-content :center;
+}
+
+.items {
+  paddding : 8px;
+  color : #555;
+  background-color : white;
+  border-radius : 3px;
+}
+
+.droppableStyle{
+  backgroundColor: '#555';
+  width : '25opx';
+  margin : '32px';
+  height : '400px';
 }

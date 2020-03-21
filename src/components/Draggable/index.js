@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class Draggable extend React.Component{
+export default class Draggable extends React.Component{
 
 
   drag = (e) => {
@@ -21,8 +21,8 @@ export default class Draggable extend React.Component{
   }
 }
 
-Droppable.propTypes = {
-  id = PropTypes.string,
-  style = PropTypes.object,
-  children = PropTypes.node,
+Draggable.propTypes = {
+  id : PropTypes.string,
+  style: PropTypes.object,
+  children : PropTypes.node,
 }
