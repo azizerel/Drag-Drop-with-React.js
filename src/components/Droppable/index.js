@@ -15,14 +15,13 @@ export default class Droppable extends React.Component{
 
 render(){
     return (
+      <div id = {this.props.id} onDrop = {this.drop} onDragOver = {this.allowDrop} className="droppableStyle">
 
-      <div id = {this.props.id} onDrop = {this.drop} onDragOver = {this.allowDrop} style = { this.props.style}>
-
-        <div id = {this.props.id + 'caption'} className= "dropPanelCaption">
+        <div id = {this.props.id + 'caption'} className="dropPanelCaption">
           {this.props.caption}
         </div>
 
-        <div id = {this.props.id + 'body'} className= "dropPanelCaption">
+        <div id = {this.props.id + 'body'}>
             {this.props.children}
         </div>
 
