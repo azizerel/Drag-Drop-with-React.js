@@ -3,46 +3,50 @@ import './App.css';
 import styled from 'styled-components';
 import Draggable from './components/Draggable';
 import Droppable from './components/Droppable';
+import Issue from './components/Issue';
 
+import {Header,HeaderContent} from './components/Header';
 
-const Wrapper = styled.div`  width : 100%;  paddding : 32px;  display: flex;  justify-content :center;`;
+const Wrapper = styled.div`paddding : 32px;  display: flex;  justify-content :center;`;
 
-const Item = styled.div`
-  paddding : 8px;
-  color : #555;
-  background-color : white;
-  border-radius : 3px;
-`;
-
-const AppWrapper = styled.div` display :flex;   justify-content : center;  margin-top :  100px;`;
-
-const droppableStyle = {
-  backgroundColor: '#555',
-  width : '250px',
-  margin : '32px',
-  height : '400px',
-};
 
 function App() {
   return (
     <div className="App">
-    <AppWrapper>
+       <Header/>
+       <HeaderContent />
+      <div className = "main">
+      <div className = "leftPanel">
+        <Wrapper id="wrapper">
+          <Droppable id = "dr1" caption="Planning">
+            <Draggable id="item1">
+                <Issue id="aziz" caption="Create Entity" issueType="Task" bgColor="royalHealthBgColor"/>
+            </Draggable>
 
-    <Wrapper id="wrapper">
-      <Droppable id = "dr1" style = {droppableStyle}>
-        <Draggable id="item1" style = {{margin : '8px'}}>  <Item  className="items"> Text 2</Item> </Draggable>
-        <Draggable id="item2"  style = {{margin : '8px'}}> <Item  className="items"> Text 1</Item> </Draggable>
-      </Droppable>
+            <Draggable id="item2">
+                <Issue id="aziz1" caption="Create Entity" issueType="Task" bgColor="sushiBgcolor"/>
+            </Draggable>
 
-      <Droppable id = "dr2" style = {droppableStyle}>
+          </Droppable>
 
-      </Droppable>
+          <Droppable id = "dr2" caption="Active">
+          <Draggable id="item3">
+            <Issue id="aziz1" caption="Create Entity" issueType="Task" bgColor="corolBgColor"/>
+              </Draggable>
+          </Droppable>
 
-      <Droppable id = "dr3" style = {droppableStyle}>
+          <Droppable id = "dr3" caption="In Progress">
+          <Draggable id="item4">
+          <Issue id="aziz1" caption="Create Entity" issueType="Task" bgColor="brickRedBgColor"/>
+          </Draggable>
+          </Droppable>
+          <Droppable id = "dr4" caption="Done">
 
-      </Droppable>
-    </Wrapper>
-</AppWrapper>
+          </Droppable>
+        </Wrapper>
+        </div>
+
+        </div>
     </div>
   );
 }
