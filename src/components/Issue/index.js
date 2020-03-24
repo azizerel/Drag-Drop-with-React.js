@@ -29,31 +29,25 @@ const useStyles = makeStyles({
 export default class Issue extends React.Component {
 
 render(){
-
   return (
       <Card  className={`issue ${ this.props.bgColor }`} variant="outlined">
 
+        <CardContent>
+           <Typography className="" color="textPrimary" gutterBottom>
+              <span className="issueHeader">{this.props.caption}</span>
+           </Typography>
 
+           <Typography className="issueBody" variant="body2" component="p">
+            <span className="issueBody">well meaning and kindly.</span>
+          </Typography>
+        </CardContent>
 
-     <CardContent>
-       <Typography className="" color="textPrimary" gutterBottom>
-        <span className="issueHeader">{this.props.caption}</span>
-       </Typography>
-
-
-       <Typography className="issueBody" variant="body2" component="p">
-
-           <span className="issueBody">well meaning and kindly.</span>
-       </Typography>
-     </CardContent>
-     <CardActions>
-       <Button size="small">Learn More</Button>
-     </CardActions>
+        <CardActions>
+          <Button size="small">Learn More</Button>
+        </CardActions>
    </Card>
   );
-}
-}
-
+}}
 
 Issue.propTypes = {
   id : PropTypes.string.isRequired,

@@ -16,35 +16,35 @@ function App() {
        <Header/>
        <HeaderContent />
       <div className = "main">
-      <div className = "leftPanel">
-        <Wrapper id="wrapper">
-          <Droppable id = "dr1" caption="Planning">
-            <Draggable id="item1">
-                <Issue id="aziz" caption="Create Entity" issueType="Task" bgColor="royalHealthBgColor"/>
-            </Draggable>
-
-            <Draggable id="item2">
-                <Issue id="aziz1" caption="Create Entity" issueType="Task" bgColor="sushiBgcolor"/>
-            </Draggable>
-
-          </Droppable>
-
-          <Droppable id = "dr2" caption="Active">
-          <Draggable id="item3">
-            <Issue id="aziz1" caption="Create Entity" issueType="Task" bgColor="corolBgColor"/>
+        <div className = "leftPanel">
+          <Wrapper id="wrapper">
+            <Droppable id = "dr1" caption="Planning">
+              <Draggable id="item1">
+                  <Issue id="issue1" caption="Create Entity" issueType="Task" bgColor="royalHealthBgColor"/>
               </Draggable>
-          </Droppable>
 
-          <Droppable id = "dr3" caption="In Progress">
-          <Draggable id="item4">
-          <Issue id="aziz1" caption="Create Entity" issueType="Task" bgColor="brickRedBgColor"/>
-          </Draggable>
-          </Droppable>
-          <Droppable id = "dr4" caption="Done">
+              <Draggable id="item2">
+                  <Issue id="issue2" caption="Create Entity" issueType="Task" bgColor="sushiBgcolor"/>
+              </Draggable>
+            </Droppable>
 
-          </Droppable>
-        </Wrapper>
-        </div>
+            <Droppable id = "dr2" caption="Active">
+              <Draggable id="item3">
+                  <Issue id="issue3" caption="Create Entity" issueType="Task" bgColor="corolBgColor"/>
+              </Draggable>
+            </Droppable>
+
+            <Droppable id = "dr3" caption="In Progress">
+              <Draggable id="item4">
+                <Issue id="issue4" caption="Create Entity" issueType="Task" bgColor="brickRedBgColor"/>
+                </Draggable>
+            </Droppable>
+
+            <Droppable id = "dr4" caption="Done">
+
+            </Droppable>
+          </Wrapper>
+          </div>
 
         </div>
     </div>
