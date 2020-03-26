@@ -6,44 +6,28 @@ import PropTypes from 'prop-types';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
-    color: '#242424'
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
+import EditIcon from '@material-ui/icons/Edit';
+import AddIcon from '@material-ui/icons/Add';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 export default class Issue extends React.Component {
-
 render(){
   return (
       <Card  className={`issue ${ this.props.bgColor }`} variant="outlined">
 
-        <CardContent>
-           <Typography className="" color="textPrimary" gutterBottom>
+        <CardContent style={{ paddingLeft : '10px'}}>
+           <Typography color="textPrimary" gutterBottom>
               <span className="issueHeader">{this.props.caption}</span>
            </Typography>
 
            <Typography className="issueBody" variant="body2" component="p">
-            <span className="issueBody">well meaning and kindly.</span>
+            <span className="issueBody"></span>
           </Typography>
         </CardContent>
 
-        <CardActions>
-          <Button size="small">Learn More</Button>
+        <CardActions className="issueFooter">
+        <AddIcon className="issueAction" />  <EditIcon className="issueAction" />  <ExpandMoreIcon className="issueAction"/>
         </CardActions>
    </Card>
   );
