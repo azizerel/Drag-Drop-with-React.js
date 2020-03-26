@@ -3,41 +3,56 @@
 }
 
 .leftPanel {
-  width: 80%;
+  width: 100%;
 }
-.rightPanel {
-  width: 20%;
-  background: red;
-}
-.droppableStyle{
-  background-color: '#555';
-  width : '25opx';
-  margin : '32px';
-  height : '400px';
-}
+
 .dropPanelCaption{
   font-weight: bold;
   margin-left: 6px;
-padding-top: 5px;
-color: #5d5a5a;
+  color: #5d5a5a;
+  padding: 10px;
+  border-bottom: 2px dashed #eee;
 }
 
 .header {
   width : 100%;
   height : 45px;
-  background-color:#ffffff;
+  background-color: #5d7b9a;
 }
+.navbarSections {
+  margin-left: 15px!important;
+  color: #ececec!important;
+  font-weight: 500!important;
+  font-size: 18px!important
+}
+
 .HeaderContent{
   width : 100%;
-  height : 100px;
+  border-bottom: 1px dashed #ccc;
+  height : 60px;
   background-color: #FBFBFC;
 }
+.HeaderContent > section{
+  padding-left: 20px;
+}
+
+.HeaderContent > section#teamActionSection{
+  color: #9b9b9e;
+  font-weight: 600;
+  padding-top: 20px;
+}
+
+.HeaderContent > section#teamActionSection > .filterButtons{
+  margin-left: 20px;
+  font-weight: bold;
+}
+
 .droppableStyle{
-     background-color: #f7f8f9;
+  background-color: #f7f8f9;
   width : 100%;
   position : relative;
   margin :10px;
-  height : 650px;
+  min-height: 600px;
 }
 
 .issue{
@@ -52,7 +67,10 @@ color: #5d5a5a;
 .issueHeader{
   font-size: 14px!important;
 }
-
+.issue > .issueFooter > .issueAction{
+  color: #655a63;
+  font-size: 16px;
+}
 .issueBody{
   font-size: 13px!important;
 }
